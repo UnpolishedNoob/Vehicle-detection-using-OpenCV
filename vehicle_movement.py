@@ -26,9 +26,9 @@ while cap.isOpened():
         c_y=int(y+h/2)
         if c_y<(height-147) and c_y>(height-163):
             count+=1
-            cv2.circle(first,(c_x,c_y),10,(0,255,255),9)
+            cv2.circle(first,(c_x,c_y),12,(0,255,255),15)
             break
-    cv2.putText(first,str(count),(10,25),cv2.FONT_HERSHEY_COMPLEX,1,(0,0,225),3)  
+    cv2.putText(first,"Number of vehicle : "+str(count),(10,25),cv2.FONT_HERSHEY_COMPLEX,1,(0,0,225),3)  
     cv2.imshow("vehicle",first)
     first=second
     ret,second=cap.read()
